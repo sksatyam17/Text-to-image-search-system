@@ -1,4 +1,5 @@
 # TODO#1: Import necessary libraries
+import os
 import torch
 import chromadb
 from PIL import Image
@@ -149,3 +150,6 @@ with gr.Blocks() as gr_interface:
 
 # TODO#14: Launch the Gradio interface
 gr_interface.launch()
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))  # Default to 8080 if PORT not set
+    iface.launch(server_name="0.0.0.0", server_port=port)
