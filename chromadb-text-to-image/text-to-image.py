@@ -152,5 +152,5 @@ with gr.Blocks() as gr_interface:
 gr_interface.launch()
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))  # Default to 8080 if PORT not set
-    gr_interface.launch(server_name="0.0.0.0:8080", server_port=port)
-
+    print(f"Running on port {port}")  # Print for debugging
+    gr_interface.launch(server_name="0.0.0.0", server_port=port)  # Bind to 0.0.0.0
